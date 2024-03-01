@@ -29,6 +29,7 @@ class User(UserMixin, Document):
     fname = StringField()
     lname = StringField()
     email = EmailField()
+    role = StringField()
     image = FileField()
     prononuns = StringField()
     adult_fname = StringField()
