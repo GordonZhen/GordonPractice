@@ -30,6 +30,7 @@ class User(UserMixin, Document):
     lname = StringField()
     email = EmailField()
     role = StringField()
+    age= IntField()
     image = FileField()
     prononuns = StringField()
     adult_fname = StringField()

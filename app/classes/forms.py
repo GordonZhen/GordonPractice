@@ -15,7 +15,7 @@ class ProfileForm(FlaskForm):
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role', choices=[("Guest","Guest"),("Learner","Learner")])
-
+    age = IntegerField('Age', validators=[DataRequired()])
 class ConsentForm(FlaskForm):
     adult_fname = StringField('First Name',validators=[DataRequired()])
     adult_lname = StringField('Last Name',validators=[DataRequired()])
