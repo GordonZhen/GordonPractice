@@ -51,3 +51,9 @@ class ClinicForm(FlaskForm):
     zipcode = StringField('Zipcode',validators=[DataRequired()])
     description = StringField('Description', validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+class BookForm(FlaskForm):
+    bookauthor = StringField("Author", validators=[DataRequired()])
+    title = StringField("Title", validators=[DataRequired()])
+    genre = SelectField("Genre",choices=[("childrens","childrens"),("adults","adults")])
+    submit =SubmitField("Submit")
