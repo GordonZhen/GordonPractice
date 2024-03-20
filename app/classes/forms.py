@@ -57,3 +57,11 @@ class BookForm(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
     genre = SelectField("Genre",choices=[("childrens","childrens"),("adults","adults")])
     submit =SubmitField("Submit")
+
+class ModelForm(FlaskForm):
+    title = StringField("Title", validators=[DataRequired()])
+    file = FileField()
+    fileSize = IntegerField()
+    thumbnail = FileField()
+    type = StringField()
+    submit =SubmitField("Submit")
