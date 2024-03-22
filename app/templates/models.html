@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-4">
+        <h1 class="display-1">Any Feedback for us?</h1>
+    </div>
+    <div class="col">
+        <a href="/model/new" class="btn btn-primary btn-sm mt-5" role="button">Comment Button</a>
+    </div>
+</div>
+
+{% if models %}
+    {% for model in models %}
+        <div class="row border-bottom">
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                <h3 class="display-5">title</h3>
+                {% endif %}
+
+                <a href="/model/{{model.id}}">
+                    {{moment(model.create_title).calendar()}}
+                </a>
+            </div>
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                <h3 class="display-5">file</h3>
+                {% endif %}
+                {{model.file}} {{model.file}}
+            </div>
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">fileSize</h3>
+                {% endif %}
+                {{model.fileSize}}
+            </div>
+        </div>
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">thumbnail</h3>
+                {% endif %}
+                {{model.thumbnail}}
+            </div>
+        </div>
+
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">type</h3>
+                {% endif %}
+                {{model.type}}
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+
+{% endif %}
+
+{% endblock %}

@@ -27,7 +27,7 @@ def model(modelID):
 @app.route('/model/delete/<modelID>')
 @login_required
 
-def ModelDelete(modelID):
+def modelDelete(modelID):
     deleteModel = Model.objects.get(id=modelID)
     if current_user == deleteModel.author:
         deleteModel.delete()
@@ -52,7 +52,6 @@ def modelNew():
             fileSize = form.fileSize.data,
             thumbnail = form.thumbnail.data,
             type = form.type.data,
-            author = current_user.id,
         )
 
         newModel.save()
@@ -85,6 +84,15 @@ def modelEdit(modelID):
         )
 
         return redirect(url_for('model',modelID=modelID))
+    
+    form.title.data = editModel.title
+    form.file.data = editModel.file
+    form.fileSize.data = editModel.fileSize
+    form.thumbnail.data = editModel.thumbnail
+    form.type.data = editModel.type
+
+    return render_template('modelform.html',form=form)
+
 
 
 

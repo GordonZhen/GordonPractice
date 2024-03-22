@@ -7,9 +7,33 @@
 
     <p>
         Comments here <br>
-        {{ form.content(cols=64, rows=10) }}
+        {{ form.title(cols=64, rows=10) }}
         <!--List the errors for this field-->
-        {% for error in form.content.errors %}
+        {% for error in form.title.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+
+        {{ form.file(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.file.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+
+        {{ form.fileSize(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.fileSize.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+
+        {{ form.thumbnail(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.thumbnail.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+
+        {{ form.type(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.type.errors %}
             <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
 
