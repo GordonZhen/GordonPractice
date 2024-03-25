@@ -60,8 +60,8 @@ class BookForm(FlaskForm):
 
 class ModelForm(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
-    file = FileField()
+    file = StringField()
     fileSize = IntegerField()
-    thumbnail = FileField()
-    type = StringField()
+    thumbnail = StringField()
+    fileType = StringField()
     submit =SubmitField("Submit")

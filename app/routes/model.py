@@ -51,7 +51,7 @@ def modelNew():
             file = form.file.data,
             fileSize = form.fileSize.data,
             thumbnail = form.thumbnail.data,
-            type = form.type.data,
+            fileType = form.fileType.data,
         )
 
         newModel.save()
@@ -79,7 +79,7 @@ def modelEdit(modelID):
             file = form.file.data,
             fileSize = form.fileSize.data,
             thumbnail = form.thumbnail.data,
-            type = form.type.data,
+            fileType = form.fileType.data,
 
         )
 
@@ -89,7 +89,7 @@ def modelEdit(modelID):
     form.file.data = editModel.file
     form.fileSize.data = editModel.fileSize
     form.thumbnail.data = editModel.thumbnail
-    form.type.data = editModel.type
+    form.fileType.data = editModel.fileType
 
     return render_template('modelform.html',form=form)
 
