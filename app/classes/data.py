@@ -103,11 +103,26 @@ class Clinic(Document):
 class Model(Document):
     author = ReferenceField('User',reverse_delete_rule=CASCADE) 
     title = StringField()
-    file = StringField()
+    file = FileField()
     fileSize = IntField()
-    thumbnail = StringField()
-    fileType = StringField()
+    thumbnail = FileField()
+    fileType = FileField()
 
     meta = {
         'ordering': ['-createdate']
     }
+
+class AstronomicalObject(Document):
+    type = StringField()
+    name = StringField()
+    mass = IntField()
+    radius = IntField()
+    model = FileField()
+
+
+class AstronomicialBody(Document):
+    type = StringField()
+    name = StringField()
+    mass= IntField()
+    radius = IntField()
+    Model = FileField()

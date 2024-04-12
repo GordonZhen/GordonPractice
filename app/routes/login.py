@@ -156,7 +156,7 @@ def callback():
     login_user(thisUser)
 
     # Send user back to homepage
-    return redirect(url_for("myProfile"))
+    return redirect(url_for("index"))
 
 
 @app.route("/logout")

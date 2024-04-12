@@ -9,3 +9,7 @@ def index():
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
+
+@app.route('/catalog') #ask why this isnt working
+def catalog():
+    return render_template('catalog.html')

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> test 3d model</title>
+<script type="module" src= "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+{% endblock %}
+
+{% block body %}
+<div id="planet">
+    <model-viewer src="static/models/scene.glb" camera-controls ios-src="static/models/scene.glb"> </model-viewer>
+    <p> * Title:Sirius<br>
+        * Source:https://sketchfab.com/3d-models/sirius-002342e8d06042d69aed2919731d4d5f<br>
+        * Author:dainius.vareika (https://sketchfab.com/dainius.vareika)<br> </p>
+</div>
+<br>
+
+<style>
+    #planet{
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        left: 4%;
+    }
+    #house model-viewer{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top:0%;
+        left: 0%;
+        border: none;
+    }
+</style>
+
+{% endblock %}
