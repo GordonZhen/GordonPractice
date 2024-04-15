@@ -16,3 +16,19 @@ html body {
 
   
 
+#planet{
+    width: 300px;
+    height: 300px;
+    /* position: absolute; */
+    top: 10%;
+    right: 0;
+    left: 4%;
+}
+#planet model-viewer{
+    width: 200px;
+    height: 200px;
+    /* position: absolute; */
+    top:0%;
+    left: 0%;
+    border: none;
+}
