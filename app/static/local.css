@@ -14,7 +14,9 @@ html body {
     color: white;
   }
 
-  
+.Catalog_title{
+  text-align:center;
+}
 
 #planet{
     width: 300px;
