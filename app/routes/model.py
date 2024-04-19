@@ -66,7 +66,7 @@ def modelNew():
 def modelEdit(modelID):
     editModel = Model.objects.get(id=modelID)
 
-    if current_user != editModel.author:
+    if current_user != editModel.author: 
         flash("You can't edit a model you don't own.")
         return redirect(url_for('model',modelID=modelID))
 
